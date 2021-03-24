@@ -8,11 +8,11 @@ lapiceras.
 */
 echo "<br>EJERCICIO 9<br><br>";
 
-$lapicera[0] = array(color => blue, marca => 'Zanst Kort', trazo => 2, precio => 76);
+$lapicera[0] = array($color => 'blue', $marca => 'Zanst Kort', $trazo => 2, $precio => 76);
 
-$lapicera[1] = array(color => red, marca => 'Bic', trazo => 3, precio => 110);
+$lapicera[1] = array($color => 'red', $marca => 'Bic', $trazo => 3, $precio => 110);
 
-$lapicera[2] = array(color => yellow, marca => 'Fabel Castel', trazo => 4, precio => 134);
+$lapicera[2] = array($color => 'yellow', $marca => 'Fabel Castel', $trazo => 4, $precio => 134);
 
 $i =0;
 foreach($lapicera[$i] as $clave=>$valor)
