@@ -1,4 +1,5 @@
 <?php 
+
 /*
 España Hernán Diego
 Aplicación No 10 (Arrays de Arrays)
@@ -8,21 +9,77 @@ Arrays de Arrays.
 */
 echo "<br>EJERCICIO 10<br><br>";
 
-$color = '';
-$marca = '';
-$trazo = 0;
-$precio = 0;
-$lapicera1;
-$lapicera2;
-$lapicera3;
+//---------------------------------------------
+$arrayAsociativo= array( 
 
-$arrayIndex= array($lapicera1 => array($color => blue, $marca => 'Zanst Kort', $trazo => 2, $precio => 76), $lapicera2=> array($color => red, $marca => 'Bic', $trazo => 3, $precio => 110), $lapicera3 => array($color => yellow, $marca => 'Fabel Castel', $trazo => 4, $precio => 134));
+'Array 1' => array('Bolígrafo Azul' => array('Color' => 'blue', 'Marca' => 'Zanst Kort', 'Trazo' => 2, 'Precio' => 76),
+'Bolígrafo Rojo'=> array('Color' => 'red', 'Marca' => 'Bic', 'Trazo' => 3, 'Precio' => 110),
+'Bolígrafo Amarillo' => array('Color' => 'yellow', 'Marca' => 'Fabel Castel', 'Trazo' => 4, 'Precio' => 134)
+),
+'Array 2' => array('Bolígrafo Azul' => array('Color' => 'blue', 'Marca' => 'Zanst Kort', 'Trazo' => 2, 'Precio' => 76),
+'Bolígrafo Rojo'=> array('Color' => 'red', 'Marca' => 'Bic', 'Trazo' => 3, 'Precio' => 110),
+'Bolígrafo Amarillo' => array('Color' => 'yellow', 'Marca' => 'Fabel Castel', 'Trazo' => 4, 'Precio' => 134)
+),
+'Array 3' => array('Bolígrafo Azul' => array('Color' => 'blue', 'Marca' => 'Zanst Kort', 'Trazo' => 2, 'Precio' => 76),
+'Bolígrafo Rojo'=> array('Color' => 'red', 'Marca' => 'Bic', 'Trazo' => 3, 'Precio' => 110),
+'Bolígrafo Amarillo' => array('Color' => 'yellow', 'Marca' => 'Fabel Castel', 'Trazo' => 4, 'Precio' => 134)
+),
 
-foreach($arrayIndex as $clave=>$valor)
+);
+//---------------------------------------------
+//---------------------------------------------
+	echo "<h1> ARRAY ASOCIATIVO </h1>";
+	foreach($arrayAsociativo as $arraynumero => $array2)
 	{
-	//echo " " . $clave . " " . $valor . "<br/>";
-	echo "{$clave} => {$valor} ";
-	print_r($arrayIndex);
+		echo "<h2> $arraynumero </h2>";
+	 
+		foreach($array2 as $boligrafo => $array3)
+		{
+			echo "<h4> $boligrafo </h4>";
+			foreach($array3 as $caracteristica => $detalle)
+			{
+				echo "$caracteristica = $detalle / ";
+			}
+		}
 	}
+//---------------------FIN ASOCIATIVO------------------------
+$arrayIndexado= array( 
+
+	'Array 1' => array('Bolígrafo Azul' => array('Color' => 'blue', 'Marca' => 'Zanst Kort', 'Trazo' => 2, 'Precio' => 76),
+	'Bolígrafo Rojo'=> array('Color' => 'red', 'Marca' => 'Bic', 'Trazo' => 3, 'Precio' => 110),
+	'Bolígrafo Amarillo' => array('Color' => 'yellow', 'Marca' => 'Fabel Castel', 'Trazo' => 4, 'Precio' => 134)
+	),
+	'Array 2' => array('Bolígrafo Azul' => array('Color' => 'blue', 'Marca' => 'Zanst Kort', 'Trazo' => 2, 'Precio' => 76),
+	'Bolígrafo Rojo'=> array('Color' => 'red', 'Marca' => 'Bic', 'Trazo' => 3, 'Precio' => 110),
+	'Bolígrafo Amarillo' => array('Color' => 'yellow', 'Marca' => 'Fabel Castel', 'Trazo' => 4, 'Precio' => 134)
+	),
+	'Array 3' => array('Bolígrafo Azul' => array('Color' => 'blue', 'Marca' => 'Zanst Kort', 'Trazo' => 2, 'Precio' => 76),
+	'Bolígrafo Rojo'=> array('Color' => 'red', 'Marca' => 'Bic', 'Trazo' => 3, 'Precio' => 110),
+	'Bolígrafo Amarillo' => array('Color' => 'yellow', 'Marca' => 'Fabel Castel', 'Trazo' => 4, 'Precio' => 134)
+	),
+	
+);
+//---------------------------------------------
+echo "<h1> ARRAY INDEXADO </h1>";
+$i= 0;
+$j= 0;
+foreach($arrayIndexado as $arraynumero => $array2)
+{
+	echo "<h2> $arraynumero </h2>";
+ 
+	foreach($array2 as $boligrafo => $array3)
+	{
+		echo "<h4> $boligrafo </h4>";
+		foreach($array3 as $caracteristica[$i] => $detalle)
+		{
+			echo " / ".$caracteristica[$i]." = ".$detalle;
+		}
+	}
+	
+	$i++;
+	$j++;
+}
+	
+//---------------------------------------------
 
 ?>
