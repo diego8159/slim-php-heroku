@@ -10,6 +10,8 @@ echo "<br>EJERCICIO 11<br><br>";
 
 //---------------------------------------------
 
+	//Ejercicio 11 de la Guia 02.
+
 	for($base=1; $base <= 4; $base++)
     { 
     	 echo "Las potencias del numero $base son:<br>";
