@@ -17,12 +17,12 @@ objeto que lo invoque (retornar una serie de asteriscos que modele el objeto).
     $miTriangulo= new Triangulo(2,3);
     var_dump($miTriangulo);
     echo "Triangulo: <br>";
-    Triangulo::Dibujar();
+    //Triangulo::Dibujar();
 
     $miRectangulo= new Rectangulo(1,4);
     var_dump($miRectangulo);
     echo "Rectangulo: <br>";
-    Rectangulo::ToString();
+    //Rectangulo::ToString();
     $miRectangulo->Dibujar();
 
 
