@@ -2,25 +2,29 @@
 
 /*
 España Hernán Diego
-Aplicación No 11 (Potencias de números)
-Mostrar por pantalla las primeras 4 potencias de los números del uno 1 al 4 (hacer una función
-que las calcule invocando la función pow).
+Aplicación No 12 (Invertir palabra)
+Realizar el desarrollo de una función que reciba un Array de caracteres y que invierta el orden
+de las letras del Array.
+Ejemplo: Se recibe la palabra “HOLA” y luego queda “ALOH”.
 */
-echo "<br>EJERCICIO 11<br><br>";
+echo "<br>EJERCICIO 12<br><br>";
 
 //---------------------------------------------
 
-	//Ejercicio 11 de la Guia 02.
+    $arrayCaracteres= array("H","O","L","A");
 
-	for($base=1; $base <= 4; $base++)
-    { 
-    	 echo "Las potencias del numero $base son:<br>";
-         for($exponente=1; $exponente <= 4; $exponente++)
-         {
-            $potencia= pow($base , $exponente);
-            echo $base." a la " . $exponente ." = ". $potencia. "<br/>" ;
-         }
-         echo "<br/>";
+    $arrayInvertido= array_reverse($arrayCaracteres);
+
+    echo "Array de caracteres:<br>";
+    foreach ($arrayCaracteres as $caracter) 
+    {
+        echo "Caracter= $caracter<br>";
+    }
+
+    echo "<br>Array invertido:<br>";
+    foreach ($arrayInvertido as $caracterInvertido) 
+    {
+        echo "Caracter= $caracterInvertido<br>";
     }
 
 ?>
