@@ -25,7 +25,7 @@ class verificarPar
 		function esImpar($entero)
 		{return 0;}
 	}
-	$numero= 8;
+	$numero= 7;
 	$verificar= new verificarPar();
 
 	if ($verificar->esPar($numero))
