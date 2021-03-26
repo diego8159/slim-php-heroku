@@ -20,7 +20,7 @@ objeto que lo invoque (retornar una serie de asteriscos que modele el objeto).
 
     $miRectangulo= new Rectangulo(1,4);
     var_dump($miRectangulo);
-    //Rectangulo::ToString();
+    Rectangulo::ToString();
     $miRectangulo->Dibujar();
 
 
