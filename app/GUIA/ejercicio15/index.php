@@ -15,12 +15,12 @@ objeto que lo invoque (retornar una serie de asteriscos que modele el objeto).
     include "./Triangulo.php";
 
     $miTriangulo= new Triangulo(2,3);
-    var_dump($miTriangulo);
+    //var_dump($miTriangulo);
     echo "Triangulo: <br>";
-    //Triangulo::Dibujar();
+    Triangulo::Dibujar();
 
     $miRectangulo= new Rectangulo(1,4);
-    var_dump($miRectangulo);
+    //var_dump($miRectangulo);
     echo "Rectangulo: <br>";
     //Rectangulo::ToString();
     $miRectangulo->Dibujar();
