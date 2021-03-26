@@ -8,22 +8,29 @@ lapiceras.
 */
 echo "<br>EJERCICIO 9<br><br>";
 
-$color = '';
-$marca = '';
-$trazo = 0;
-$precio = 0;
+$arrayAsociativo= array('Bolígrafo Azul' => array('Color' => 'blue', 'Marca' => 'Zanst Kort', 'Trazo' => 2, 'Precio' => 76),
+'Bolígrafo Rojo'=> array('Color' => 'red', 'Marca' => 'Bic', 'Trazo' => 3, 'Precio' => 110),
+'Bolígrafo Amarillo' => array('Color' => 'yellow', 'Marca' => 'Fabel Castel', 'Trazo' => 4, 'Precio' => 134)
+);
 
-$lapicera[0] = array($color => 'blue', $marca => 'Zanst Kort', $trazo => 2, $precio => 76);
-
-$lapicera[1] = array($color => 'red', $marca => 'Bic', $trazo => 3, $precio => 110);
-
-$lapicera[2] = array($color => 'yellow', $marca => 'Fabel Castel', $trazo => 4, $precio => 134);
-
-$i =0;
-foreach($lapicera[$i] as $clave=>$valor)
+/*
+	foreach($arrayAsociativo as $boligrafos => $detalle)
+		{
+			echo "$boligrafos:<br>";
+			while (list($clave, $valor) = each($detalle) ) {
+				echo "$clave= $valor<br>";
+			}
+			echo "<br>";
+		}
+*/
+	foreach($arrayAsociativo as $boligrafo => $array2)
 	{
-	echo " " . $clave . " " . $valor . "<br/>";
+		echo "<h1> $boligrafo </h1>";
+	 
+		foreach($array2 as $caracteristica => $detalle)
+		{
+			echo "$caracteristica = $detalle<br>";
+		}
 	}
-	$i = $i + 1;
 
 ?>

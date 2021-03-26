@@ -8,7 +8,15 @@ Arrays de Arrays.
 */
 echo "<br>EJERCICIO 10<br><br>";
 
-$arrayIndex= array(lapicera1 => array(color => blue, marca => 'Zanst Kort', trazo => 2, precio => 76), lapicera=> array(color => red, marca => 'Bic', trazo => 3, precio => 110), lapicera3 => array(color => yellow, marca => 'Fabel Castel', trazo => 4, precio => 134));
+$color = '';
+$marca = '';
+$trazo = 0;
+$precio = 0;
+$lapicera1;
+$lapicera2;
+$lapicera3;
+
+$arrayIndex= array($lapicera1 => array($color => blue, $marca => 'Zanst Kort', $trazo => 2, $precio => 76), $lapicera2=> array($color => red, $marca => 'Bic', $trazo => 3, $precio => 110), $lapicera3 => array($color => yellow, $marca => 'Fabel Castel', $trazo => 4, $precio => 134));
 
 foreach($arrayIndex as $clave=>$valor)
 	{
