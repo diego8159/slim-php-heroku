@@ -12,7 +12,7 @@ objeto que lo invoque (retornar una serie de asteriscos que modele el objeto).
 */
     include "./FiguraGeometrica.php";
     //include "./Rectangulo.php";
-    //include "./Triangulo.php";
+    include "./Triangulo.php";
 
     //$miTriangulo= new Triangulo(2,3);
     //var_dump($miTriangulo);
