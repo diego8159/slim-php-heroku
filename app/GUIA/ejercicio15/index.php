@@ -14,8 +14,8 @@ objeto que lo invoque (retornar una serie de asteriscos que modele el objeto).
     //include "./Rectangulo.php";
     include "./Triangulo.php";
 
-    //$miTriangulo= new Triangulo(2,3);
-    //var_dump($miTriangulo);
+    $miTriangulo= new Triangulo(2,3);
+    var_dump($miTriangulo);
     echo "Triangulo: <br>";
     //Triangulo::ToString();
     //$miTriangulo->Dibujar();
