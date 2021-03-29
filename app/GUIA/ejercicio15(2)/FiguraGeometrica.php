@@ -20,17 +20,18 @@
 
         function GetColor()
         {
+            
             return $this->_color;
         }
 
-        function SetColor(string $color)
+        function SetColor()
         {
             
-            $this->_color = $color;
+            $this->_color = $_color;
         }
 
         function ToString()
-        {   return "Color: {$this->GetColor()}<br/> Perimetro: {$this->_perimetro} <br/>Superficie: {$this->_superficie} <br/>"; }
+        {   return " ";}
     }
     
 

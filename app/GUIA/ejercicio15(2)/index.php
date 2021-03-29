@@ -14,26 +14,21 @@ objeto que lo invoque (retornar una serie de asteriscos que modele el objeto).
     require "./Rectangulo.php";
     require "./Triangulo.php";
 
-
-    $miTriangulo= new Triangulo(5,3);
+    $miTriangulo= new Triangulo(2,3);
     //var_dump($miTriangulo);
     echo "Triangulo: <br>";
-    $miTriangulo->SetColor("red");
-    $miTriangulo->ToString();
     //Triangulo::ToString();
-    //$miTriangulo->Dibujar();
+    $miTriangulo->Dibujar();
     //echo "Triangulo vs2: <br>";
     //Triangulo::Dibujar();
 
-    echo "------------------------------------------------<br>";
+    echo "<br>------------------------------------------------<br>";
 
-    $miRectangulo= new Rectangulo(3,7);
+    $miRectangulo= new Rectangulo(1,4);
     //var_dump($miRectangulo);
     echo "Rectangulo: <br>";
-    $miRectangulo->SetColor("green");
-    $miRectangulo->ToString();
     //Rectangulo::ToString();
-    //$miRectangulo->Dibujar();
+    $miRectangulo->Dibujar();
 
 
 ?>
