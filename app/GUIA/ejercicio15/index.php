@@ -19,8 +19,10 @@ objeto que lo invoque (retornar una serie de asteriscos que modele el objeto).
     echo "Triangulo: <br>";
     //Triangulo::ToString();
     $miTriangulo->Dibujar();
-    echo "Triangulo vs2: <br>";
+    //echo "Triangulo vs2: <br>";
     //Triangulo::Dibujar();
+
+    echo "<br>------------------------------------------------<br>";
 
     $miRectangulo= new Rectangulo(1,4);
     //var_dump($miRectangulo);
