@@ -10,17 +10,17 @@ funcionalidad será la de inicializar los atributos _superficie y _perimetro.
 Dibujar, retornará un string (con el color que corresponda) formando la figura geométrica del
 objeto que lo invoque (retornar una serie de asteriscos que modele el objeto).
 */
-    include "./FiguraGeometrica.php";
-    include "./Rectangulo.php";
-    include "./Triangulo.php";
+    require "./FiguraGeometrica.php";
+    require "./Rectangulo.php";
+    require "./Triangulo.php";
 
     $miTriangulo= new Triangulo(2,3);
-    var_dump($miTriangulo);
+    //var_dump($miTriangulo);
     echo "Triangulo: <br>";
     //Triangulo::ToString();
     $miTriangulo->Dibujar();
-    //echo "Triangulo vs2: <br>";
-    //Triangulo::Dibujar();
+    echo "Triangulo vs2: <br>";
+    Triangulo::Dibujar();
 
     $miRectangulo= new Rectangulo(1,4);
     //var_dump($miRectangulo);
