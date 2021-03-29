@@ -10,7 +10,7 @@ funcionalidad será la de inicializar los atributos _superficie y _perimetro.
 Dibujar, retornará un string (con el color que corresponda) formando la figura geométrica del
 objeto que lo invoque (retornar una serie de asteriscos que modele el objeto).
 */
-    //include "./FiguraGeometrica.php";
+    include "./FiguraGeometrica.php";
     //include "./Rectangulo.php";
     //include "./Triangulo.php";
 
