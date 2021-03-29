@@ -11,7 +11,7 @@ Dibujar, retornará un string (con el color que corresponda) formando la figura 
 objeto que lo invoque (retornar una serie de asteriscos que modele el objeto).
 */
     include "./FiguraGeometrica.php";
-    include "./Rectangulo.php";
+    //include "./Rectangulo.php";
     include "./Triangulo.php";
 
     $miTriangulo= new Triangulo(2,3);
@@ -20,7 +20,7 @@ objeto que lo invoque (retornar una serie de asteriscos que modele el objeto).
     //Triangulo::ToString();
     //$miTriangulo->Dibujar();
     echo "Triangulo vs2: <br>";
-    Triangulo::Dibujar();
+    //Triangulo::Dibujar();
 
     //$miRectangulo= new Rectangulo(1,4);
     //var_dump($miRectangulo);
