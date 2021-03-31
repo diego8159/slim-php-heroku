@@ -18,7 +18,7 @@ require "./usuario.php";
     $mail = $_POST["mail"];
 
     $nuevoUsuario = new Usuario($nombre, $clave, $mail);
-    if ($nuevoUsuario->_validarUsuario()) {
+    if (Usuario::_validarUsuario()) {
         if ($nuevoUsuario->GuardarEnCSV()) {
             echo "Se pudo agregar el usuario nuevo<br>";
         }else {
