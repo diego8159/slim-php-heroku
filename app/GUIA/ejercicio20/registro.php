@@ -11,14 +11,16 @@
     Cada usuario se agrega en un renglón diferente al anterior.
     Hacer los métodos necesarios en la clase usuario
 */
-require "./usuario.php";
+include "./usuario.php";
 
     $nombre = $_POST["nombre"];
     $clave = $_POST["clave"];
     $mail = $_POST["mail"];
 
     $nuevoUsuario = new Usuario($nombre, $clave, $mail);
-    if (Usuario::_validarUsuario()) {
+    //var_dump($nuevoUsuario);
+    //*
+    if (Usuario::_validarUsuario($nuevoUsuario)) {
         if ($nuevoUsuario->GuardarEnCSV()) {
             echo "Se pudo agregar el usuario nuevo<br>";
         }else {
@@ -27,7 +29,7 @@ require "./usuario.php";
     }else {
         echo "Alguno de los datos no esta completo. Porfavor complete todos los datos.<br>";
     }
-    
+    //*/
 
 /*
 $nuevoUsuario = new Usuario();

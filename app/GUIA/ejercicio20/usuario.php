@@ -12,14 +12,16 @@
             $this->clave= $parametro_clave;
             $this->mail= $parametro_mail;
         }
-     static function _validarUsuario()
+     static function _validarUsuario(Usuario $usuario)
      {
          $estado = NULL;
-        if (isset($this->nombre) && isset($this->clave) && isset($this->mail)) 
+        if (isset($usuario->nombre) && isset($usuario->clave) && isset($usuario->mail)) 
         {
             $estado= true;
+            //echo "Seteo bien";
         }else {
             $estado= false;
+            //echo "Seteo mal";
         }
         return $estado;
      }
@@ -39,10 +41,12 @@
             //fwrite($miArchivo, "$usuario->nombre, $usuario->mail, ".date("d/m/Y")."\n");
             //fclose($miArchivo);
             //return $miArchivo;
-            if (fwrite($miArchivo, "$usuario->nombre, $usuario->mail, ".date("d/m/Y")."\n")) {//fwrite($miarchivo, $mensaje) ---- validar escritura de archivo
+            if (fwrite($miArchivo, "$this->nombre, $this->mail, ".date("d/m/Y")."\n")) {//fwrite($miarchivo, $mensaje) ---- validar escritura de archivo
                 //$retorno = true;
+                //echo "fwrite";
                 return true;
             }else {
+                //echo "fwrite fallido";
                 return false;
             }
             fclose($miarchivo);
