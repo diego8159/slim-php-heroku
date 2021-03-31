@@ -37,7 +37,7 @@
         //$retorno = false;
         //if ($this->_validarUsuario()) {//validar usuario
             
-            $miArchivo= fopen("usuario.csv", "a") or die("Imposible abrir el archivo");//con a agrega datos y con w sobrescribe.
+            $miArchivo= fopen("usuario.csv", "w") or die("Imposible abrir el archivo");//con a agrega datos y con w sobrescribe.
             //fwrite($miArchivo, "$usuario->nombre, $usuario->mail, ".date("d/m/Y")."\n");
             //fclose($miArchivo);
             //return $miArchivo;
