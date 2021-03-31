@@ -26,34 +26,32 @@
         return $estado;
      }
 
-    function GuardarEnCSV()
-    {
-        $miArchivo= fopen("usuario.csv", "a") or die("Imposible arbrir el archivo");//con a agrega datos y con w sobrescribe.
-        fwrite($miArchivo, "$this->nombre; $this->mail; ".date("d/m/Y")."\n");
-        fclose($miArchivo);
-        return $miArchivo;
-
-        /*
-        //$mensaje = null;
-        //$retorno = false;
-        //if ($this->_validarUsuario()) {//validar usuario
-            
-            $miArchivo= fopen("usuario.csv", "a") or die("Imposible abrir el archivo");//con a agrega datos y con w sobrescribe.
-            //fwrite($miArchivo, "$usuario->nombre, $usuario->mail, ".date("d/m/Y")."\n");
-            //fclose($miArchivo);
-            //return $miArchivo;
-            if (fwrite($miArchivo, "$this->nombre, $this->mail, ".date("d/m/Y")."\n")) {//fwrite($miarchivo, $mensaje) ---- validar escritura de archivo
-                //$retorno = true;
-                //echo "fwrite";
-                return true;
-            }else {
-                //echo "fwrite fallido";
-                return false;
-            }
-            fclose($miarchivo);
-        //return $miarchivo;
-        */
-    }
+     function GuardarEnCSV()
+     {
+         //$miArchivo= fopen("usuario.csv", "a") or die("Imposible arbrir el archivo");//con a agrega datos y con w sobrescribe.
+         //fwrite($miArchivo, "$usuario->nombre; $usuario->mail; ".date("d/m/Y")."\n");
+         //fclose($miArchivo);
+         //return $miArchivo;
+ 
+         //$mensaje = null;
+         //$retorno = false;
+         //if ($this->_validarUsuario()) {//validar usuario
+             
+             $miArchivo= fopen("usuario.csv", "a") or die("Imposible abrir el archivo");//con a agrega datos y con w sobrescribe.
+             //fwrite($miArchivo, "$usuario->nombre, $usuario->mail, ".date("d/m/Y")."\n");
+             //fclose($miArchivo);
+             //return $miArchivo;
+             if (fwrite($miArchivo, "$this->nombre, $this->mail, ".date("d/m/Y")."\n")) {//fwrite($miarchivo, $mensaje) ---- validar escritura de archivo
+                 //$retorno = true;
+                 //echo "fwrite";
+                 return true;
+             }else {
+                 //echo "fwrite fallido";
+                 return false;
+             }
+             fclose($miarchivo);
+         //return $miarchivo;
+     }
  }
  
 
