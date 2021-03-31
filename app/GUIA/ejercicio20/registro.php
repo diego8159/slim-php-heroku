@@ -13,7 +13,6 @@
 */
 require "./usuario.php";
 
-if (isset($_POST["nombre"])) {
     $nombre = $_POST["nombre"];
     $clave = $_POST["clave"];
     $mail = $_POST["mail"];
@@ -29,7 +28,7 @@ if (isset($_POST["nombre"])) {
         echo "Alguno de los datos no esta completo. Porfavor complete todos los datos.<br>";
     }
     
-}
+
 /*
 $nuevoUsuario = new Usuario();
 $nombre = $_POST["nombre"];
