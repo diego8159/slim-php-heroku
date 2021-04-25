@@ -1,0 +1,44 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ejercicio24",
+		"_postman_id": "c42db4d4-f29c-0d0b-0cd6-1e94643a0244",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost/PHP/programacion3/ejercicio24/listado.php?listado=usuarios",
+			"request": {
+				"url": {
+					"raw": "http://localhost/PHP/programacion3/ejercicio24/listado.php?listado=usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"PHP",
+						"programacion3",
+						"ejercicio24",
+						"listado.php"
+					],
+					"query": [
+						{
+							"key": "listado",
+							"value": "usuarios"
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

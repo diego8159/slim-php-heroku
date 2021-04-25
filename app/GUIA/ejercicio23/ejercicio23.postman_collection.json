@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "0ecbeaa7-0aa5-46d9-b228-7b055db463be",
+		"name": "ejercicio23",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost/PHP/programacion3/ejercicio23/registro.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/Users/diego/OneDrive/Imágenes/juego mentirasIMG.PNG"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "fecha",
+							"value": "06/04/2021",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/PHP/programacion3/ejercicio23/registro.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"PHP",
+						"programacion3",
+						"ejercicio23",
+						"registro.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/PHP/programacion3/ejercicio23/registro.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/Users/diego/OneDrive/Imágenes/recursos_rest/chef-s-hat-psd-413683.png"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "fecha",
+							"value": "06/04/2021",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://espanahernandiego.herokuapp.com/GUIA/ejercicio23/registro.php",
+					"protocol": "https",
+					"host": [
+						"espanahernandiego",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"GUIA",
+						"ejercicio23",
+						"registro.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

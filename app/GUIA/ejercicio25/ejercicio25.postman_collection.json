@@ -1,0 +1,63 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ejercicio25",
+		"_postman_id": "82d90f81-be92-34c4-bb44-d077d2a9a1b9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost/PHP/programacion3/ejercicio25/altaProductos.php",
+			"request": {
+				"url": "http://localhost/PHP/programacion3/ejercicio25/altaProductos.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "dddfsg",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "trtr",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "12",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "52",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "codigo",
+							"value": "hdss33",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "9",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
