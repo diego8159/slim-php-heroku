@@ -16,124 +16,49 @@ class Producto
         $this->_nombre = $_nombre;
         $this->_tipo = $_tipo;
         $this->_stock = $_stock;
-        //$this->_id = rand(1, 10000);
+        $this->_id = rand(1, 10000);
         $this->_precio = $_precio;
         $this->_codigoDeBarras = $_codigoDeBarras;
     }
 
-    function GetNombre()
-    {
-        return $this->_nombre;
-    }
-    function GetTipo()
-    {
-        return $this->_tipo;
-    }
-    function GetPrecio()
-    {
-        return $this->_precio;
-    }
-    function GetStock()
-    {
-        return $this->_stock;
-    }
-    function GetCodigo()
-    {
-        return $this->_codigoDeBarras;
-    }
-    function GetId()
-    {
-        return $this->_id;
-    }
-    function SetNombre($_nombre)
-    {
-        $this->_nombre = $_nombre;
-    }
-    function SetTipo($_tipo)
-    {
-        $this->_tipo = $_tipo;
-    }
-    function SetPrecio($_precio)
-    {
-        $this->_precio = $_precio;
-    }
-    function SetStock($_stock)
-    {
-        $this->_stock = $_stock;
-    }
-    function SetCodigo($_codigoDeBarras)
-    {
-        $this->_codigoDeBarras = $_codigoDeBarras;
-    }
-    function SetId($_id)
-    {
-        $this->_id = $_id;
-    }
-
-
-    public function altaProducto($producto, $path)
+    public function altaProducto($path)
     {
        $ret = "";
-        
-            if (Leer_Json($path, $listaProd)) 
-            {
+        $listaProd= Leer_Json($path);
+        $flag= true;
                 
                 foreach ($listaProd as $auxProd) 
                 {
-                    
-                    if ($producto->_id == $auxProd['_id']) 
+                    //var_dump($auxProd->_id);
+                    if ($this->_id == $auxProd->_id) 
                     {
-                        
-                        Producto::AgregarStock($auxProd['_id'], $producto->_stock);
-                        
+                        Producto::AgregarStock($auxProd->_id, $this->_stock) or die("no se pudo hacer");   
                         $ret = "Actualizado";
-                    } else 
-                    {
-                        
-                        Guardar_Json($producto, "productos.json");
-                        
-                        $ret = "Ingresado";
-
+                        $flag= false;
                     }
-                    
                 }
-            } 
-            else 
-            {
-                echo "aca llega";
-                Guardar_Json($producto, "./productos.json");
-                $ret = "Primer producto";
-            }
-        
-       
+                if ($flag) {
+                    Guardar_Json($this, "productos.json") or die("no se pudo hacer");   
+                    $ret = "Ingresado";
+                }        
         return $ret;
-
-        
     }
-
-  
-   
 
    public static function AgregarStock($id, $cantidad)
     {
 
-
-        if (Leer_Json("productos.json", $productos)) {
-
+        $productos= Leer_Json("productos.json");
 
             for ($i = 0; $i < sizeof($productos); $i++) {
 
-                if ($id == $productos[$i]['_id']) {
+                if ($id == $productos[$i]->_id) {
 
-                    $stock = $productos[$i]['_stock'] + $cantidad;
-
-                    $productos[$i]['_stock'] = $stock;
+                    $productos[$i]->_stock += $cantidad;
 
                     Reescribir_Json($productos, 'productos.json');
                     return true;
                 }
             }
-        }
         return false;
     }
 }

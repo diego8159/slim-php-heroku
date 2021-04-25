@@ -1,6 +1,10 @@
 <?php
-error_reporting(E_ALL); 
-ini_set('display_errors','1'); 
+//error_reporting(E_ALL); 
+//ini_set('display_errors','1'); 
+// Notificar todos los errores de PHP (ver el registro de cambios)
+error_reporting(E_ALL);
+// Lo mismo que error_reporting(E_ALL);
+ini_set('error_reporting', E_ALL);
 
 function guardar_CSV($path, $dato)
 {
@@ -26,50 +30,34 @@ function leer_CSV($archivoCSV)
     return $arrayUsuarios;
 }
 
-function Leer_Json($path, &$array)
+    function Leer_Json($path)
     {
-        $retorno = false;
+        $array = [];
         if(file_exists($path) && filesize($path) > 0)
         {
-            $archivo = fopen($path, 'r') or die("Error. imposible abrir el archivo.");
-            echo "Mostrando el array que se recibe: ".$array;
-            var_dump($array);
-            $array = fread($archivo, filesize($path)) or die("Error. imposible leer el archivo.");
-            $cerrar = fclose($archivo) or die("Error. imposible cerrar el archivo.");
-            echo "Mostrando el array leido: ".$array;
-            var_dump($array);
-            $array = json_decode($array, true) or die("Error. imposible traducir el archivo.");
-            echo "Mostrando el array des-convertido: ".$array;
-            var_dump($array);
-            $retorno = true;
+            $archivo = fopen($path, 'r');// or die("Error. imposible abrir el archivo.");
+            $arrayleido = fread($archivo, filesize($path));// or die("Error. imposible leer el archivo.");
+            $array = json_decode($arrayleido);// or die("Error. imposible traducir el archivo.");
+            fclose($archivo);// or die("Error. imposible cerrar el archivo.");
         }
-        else
-        {
-            $array = array();
-        }
-        return $retorno;
+        return $array;
 
     }
 
 function Guardar_Json($dato, $path)
 {
     $retorna = false;
-    
-
-    if (Leer_Json($path, $array)) 
-    {
-        array_push($array, $dato) or die("Error. imposible añadir dato al array.");
-        $aux = json_encode($array, true) or die("Error. imposible convertir el archivo.");
-    } else {
-        array_push($array, $dato) or die("Error. imposible añadir dato al array.");
-        $aux = json_encode($array, true) or die("Error. imposible convertir el archivo.");
-    }
-
-    $archivo = fopen($path, 'w') or die("Error. imposible abrir el archivo para modificarlo.");
+    $aux= [];
+    $array= [];
+    //*
+    $array= Leer_Json($path);// or die("Error. imposible leer la ruta.");
+    array_push($array, $dato);// or die("Error. imposible añadir dato al array.");
+    $aux = json_encode($array, true);// or die("Error. imposible convertir el archivo.");
+    $archivo = fopen($path, 'w');// or die("Error. imposible abrir el archivo para modificarlo.");
     if (fwrite($archivo, $aux)) {
         $retorna = true;
     }
-    fclose($archivo) or die("Error. imposible cerrar el archivo.");
+    fclose($archivo);// or die("Error. imposible cerrar el archivo.");
 
     return $retorna;
 }

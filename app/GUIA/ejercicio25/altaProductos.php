@@ -25,18 +25,13 @@ $tipo = $_POST["tipo"];
 $stock = $_POST["stock"];
 $precio = $_POST["precio"];
 $codigoDeBarras = $_POST["codigo"];
-$id = $_POST["id"];
 
 if ((isset($nombre) == true) &&
     (isset($tipo) == true) &&
     (isset($stock) == true) &&
     (isset($precio) == true) &&
-    (isset($codigoDeBarras) == true) &&
-    (isset($id) == true)
+    (isset($codigoDeBarras) == true)
 ) {
     $producto = new Producto($nombre, $tipo, $stock, $precio, $codigoDeBarras);
-    /*$x=$producto->altaProducto($producto);
-    echo $x;*/
-    $producto->SetId($id);
-    echo $producto->altaProducto($producto, "productos.json");
+    echo $producto->altaProducto("productos.json");
 }
