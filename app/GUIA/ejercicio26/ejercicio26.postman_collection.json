@@ -1,0 +1,77 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ejercicio26",
+		"_postman_id": "9d9580bd-4931-eaa2-5b40-45447c1c844a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost/PHP/programacion3/ejercicio25/altaProductos.php",
+			"request": {
+				"url": "http://localhost/PHP/programacion3/ejercicio26/RealizarVenta.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codDeBarra",
+							"value": "fjghd3",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "idUsuario",
+							"value": "2028",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "cantDeItems",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://espanahernandiego.herokuapp.com/GUIA/ejercicio26/RealizarVenta.php",
+			"request": {
+				"url": "http://espanahernandiego.herokuapp.com/GUIA/ejercicio26/RealizarVenta.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codDeBarra",
+							"value": "fjghd3",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "idUsuario",
+							"value": "2028",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "cantDeItems",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
