@@ -1,0 +1,101 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ejercicio27",
+		"_postman_id": "dba54ee0-6b4c-9303-93d5-c5b6b38ab19a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost/PHP/programacion3/ejercicio25/altaProductos.php",
+			"request": {
+				"url": "http://localhost/PHP/programacion3/heroku/slim-php-heroku/app/GUIA/ejercicio27/Registro.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "pedro",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Beryuli",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "9923",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "pberyuli@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "localidad",
+							"value": "ezeiza",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/PHP/programacion3/ejercicio25/altaProductos.php copy",
+			"request": {
+				"url": "https://espanahernandiego.herokuapp.com/GUIA/ejercicio27/Registro.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "pedro2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Beryuli2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "9923",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "pberyuli2@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "localidad",
+							"value": "ezeiza",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
